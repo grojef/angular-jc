@@ -1,0 +1,198 @@
+@charset "utf-8";
+html{font-family: sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,header,hgroup,nav,section,article,aside,footer,figure,figcaption,menu,button {
+  margin: 0;
+  padding: 0
+}
+h1,h2,h3,h4,h5,h6 { font-size: inherit;font-weight: 500;}
+a {text-decoration: none;}
+a:active, a:hover {outline: 0;}
+img {border: 0;}
+li{ list-style: none;}
+table {width: 100%; border-collapse: collapse; border-spacing: 0;}
+.mt10{ margin-top: 10px;}
+.ml10{margin-left: 10px;}
+.flex_box {display: -webkit-box;display: -ms-flexbox;display: -webkit-flex; display: flex;}
+.flex_box li {-webkit-box-flex: 1; -ms-flex: 1; -webkit-flex: 1; flex: 1;}
+/*== close ==*/
+.k-close{
+    font-size: 22px;
+    line-height: 1;
+    float: right;
+    margin-top: -5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: .4;
+    color: #000;
+    border: 0;
+    background: transparent;
+    filter: alpha(opacity=40);
+    -webkit-appearance: none;
+}
+.k-modal-backdrop{
+    position: absolute;
+    z-index: 1040;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+}
+/*== modal ==*/
+.k-modal{
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+}
+.k-modal-dialog{
+    position: absolute;
+    z-index: 1050;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.k-modal-content {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  background-clip: padding-box;
+  outline: 0;
+}
+.k-modal-header{
+    min-height: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.k-modal-title{
+    line-height: 1.5;
+}
+.k-modal-body{
+    position: relative;
+    padding: 15px;
+}
+.k-modal-footer{
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+/*== overlay ==*/
+.k-modal-overlay{
+    background: rgba(255, 255, 255, .95);
+}
+.k-modal-overlay .k-modal-content,
+.k-modal-overlay .k-modal-dialog{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.k-modal-overlay .k-modal-dialog{
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
+}
+
+.k-modal-adsorb .k-modal-dialog{
+  top: initial;
+  left: initial;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform:translate(0,0);
+  transform:translate(0,0);
+}
+
+
+/* btn style */
+.k-btn {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 4px;
+}
+.k-btn:active{
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.k-btn.disabled,
+.k-btn[disabled]{
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.k-btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+.k-btn-primary {
+  color: #ffffff;
+  background-color: #007aff;
+  border-color: #006ee6;
+}
+
+.k-btn-success {
+  color: #ffffff;
+  background-color: #4cd964;
+  border-color: #37d552;
+}
+
+.k-btn-info {
+  color: #ffffff;
+  background-color: #34aadc;
+  border-color: #249ed2;
+}
+
+.k-btn-warning {
+  color: #ffffff;
+  background-color: #ffcc00;
+  border-color: #e6b800;
+}
+
+.k-btn-danger {
+  color: #ffffff;
+  background-color: #ff3b30;
+  border-color: #ff2317;
+}
+
+.k-btn-link {
+  color: #007aff;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.k-btn-block {
+display: block;
+width: 100%;
+padding-left: 0;
+padding-right: 0;
+}

@@ -1,0 +1,47 @@
+<ion-view>
+	<div class="tch_lay">
+		<div class="tch_head bg_black">
+			<p class="tac fs36">即时竞猜</p>
+			<div class="icon_bg icon_back"></div>
+			<div class="icon_bg icon_toggle"></div>
+		</div>
+		<div class="guess_tabs_hd">
+			<ul class="flex_equal">
+				<li class="current" ui-sref=".current">热猜中</li>
+				<li ui-sref=".over">已结束</li>
+				<li ui-sref=".attention">我的关注</li>
+			</ul>
+		</div>
+	</div>
+	<div id="js_scroll">
+		<div class="guess_tabs_bd">
+			<div class="competition_box">
+				<div class="competition_hd">
+					<span>2014-11-19 星期五 30场比赛</span>
+					<div class="icon_bg icon_dropdown"></div>
+				</div>
+				<div class="competition_bd">
+					<div class="competition_data" ng-repeat="race in races" ng-click="detail(race.matchId);">
+						<div class="icon_bg" ng-class="{icon_select_on:race.isattiton}" ng-click="race.isattiton=!race.isattiton"></div>
+						<ul class="table_equal">
+							<li>
+								<img class="team_img" src="img/1.png" alt="">
+								<p>{{race.guestTeam}}</p>
+							</li>
+							<li>
+								<p class="green fs54">{{race.score}}</p>
+								<p class="green fs20">{{race.time}}</p>
+								<p class="c666 fs16">{{race.many}}人竞猜</p>
+							</li>
+							<li>
+								<img class="team_img" src="img/2.png" alt="">
+								<p>{{race.homeTeam}}<span class="fs18">（主）</span></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</ion-view>
