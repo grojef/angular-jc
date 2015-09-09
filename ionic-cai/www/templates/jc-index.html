@@ -1,47 +1,29 @@
-<ion-view>
-	<div class="tch_lay">
-		<div class="tch_head bg_black">
-			<p class="tac fs36">即时竞猜</p>
-			<div class="icon_bg icon_back"></div>
-			<div class="icon_bg icon_toggle"></div>
-		</div>
+<div class="tch_lay">
+	<div class="tch_head bg_black">
+		<a ng-click="history.go(-1)" class="icon_bg icon_back"></a>
+		<p class="tac fs36">即时竞猜</p>
+		<div id="js_toggle" class="icon_bg icon_toggle" ng-click="toggle_menu=!toggle_menu"></div>
+		<div id="js_filtrate" class="icon_bg icon_filtrate" ></div>
+	</div>
+	<ul class="toggle_menu" ng-show="toggle_menu">
+		<li>
+			<a href="http://m.aicai.com/index.do?agentId=1&vt=5">爱彩首页</a>
+		</li>
+		<li><a href="http://m.aicai.com/jc/jjcIndex.do?agentId=1&vt=5">竞技场</a></li>
+		<li><a href="http://m.aicai.com/jc/myJc/jcRecord.do?agentId=1&vt=5">竞猜记录</a></li>
+		<li><a href="http://m.aicai.com/jc/ranking.do?agentId=1&vt=5">达人榜</a></li>
+		<li><a href="http://m.aicai.com/jc/wapGiftCore.do?agentId=1&vt=5">兑换中心</a></li>
+		<li><a href="http://m.aicai.com/jc/myJc.do?agentId=1&vt=5">我的竞猜</a></li>
+	</ul>
 		<div class="guess_tabs_hd">
 			<ul class="flex_equal">
-				<li class="current" ui-sref=".current">热猜中</li>
-				<li ui-sref=".over">已结束</li>
-				<li ui-sref=".attention">我的关注</li>
+				<li ui-sref-active="current" ui-sref=".current">热猜中</li>
+				<li ui-sref-active="current" ui-sref=".over">竞猜结束</li>
+				<li ui-sref=".attention" ui-sref-active="current">我的关注</li>
 			</ul>
 		</div>
 	</div>
-	<div id="js_scroll">
-		<div class="guess_tabs_bd">
-			<div class="competition_box">
-				<div class="competition_hd">
-					<span>2014-11-19 星期五 30场比赛</span>
-					<div class="icon_bg icon_dropdown"></div>
-				</div>
-				<div class="competition_bd">
-					<div class="competition_data" ng-repeat="race in races" ng-click="detail(race.matchId);">
-						<div class="icon_bg" ng-class="{icon_select_on:race.isattiton}" ng-click="race.isattiton=!race.isattiton"></div>
-						<ul class="table_equal">
-							<li>
-								<img class="team_img" src="img/1.png" alt="">
-								<p>{{race.guestTeam}}</p>
-							</li>
-							<li>
-								<p class="green fs54">{{race.score}}</p>
-								<p class="green fs20">{{race.time}}</p>
-								<p class="c666 fs16">{{race.many}}人竞猜</p>
-							</li>
-							<li>
-								<img class="team_img" src="img/2.png" alt="">
-								<p>{{race.homeTeam}}<span class="fs18">（主）</span></p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			</div>
-		</div>
-	</div>
-</ion-view>
+	<ui-view></ui-view>
+
+
+

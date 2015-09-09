@@ -49,9 +49,9 @@ angular.module('starter.services', [])
   };
 }).service('jcRace',function(){
       var race={
-        "current":[{"matchId":1001,"homeTeam":"小牛","guestTeam":"热火","many":888,"score":"45:78","time":"第1节 3:45","isattiton":true},{"matchId":1002,"homeTeam":"湖人","guestTeam":"火箭","many":1888,"score":"45:78","time":"第2节 5:46","isattiton":true}],
-        "over":[{}],
-        "attention":[]
+        "current":[{"matchId":1001,"homeTeam":"小牛","guestTeam":"热火","many":888,"homeScore":45,"guestScore":78,"time":"第1节 3:45","isattiton":true},{"matchId":1002,"homeTeam":"湖人","guestTeam":"火箭","many":1888,"homeScore":45,"guestScore":78,"time":"第2节 5:46","isattiton":true}],
+        "over":[{"matchId":1001,"homeTeam":"小牛","guestTeam":"热火","many":888,"homeScore":45,"guestScore":78,"time":"第1节 3:45","isattiton":false},{"matchId":1002,"homeTeam":"湖人","guestTeam":"火箭","many":1888,"homeScore":45,"guestScore":78,"time":"第2节 5:46","isattiton":false}],
+        "attention":[{"matchId":1001,"homeTeam":"小牛","guestTeam":"热火","many":888,"homeScore":45,"guestScore":78,"time":"第1节 3:45","isattiton":true}]
       }
     return {
       all:race
