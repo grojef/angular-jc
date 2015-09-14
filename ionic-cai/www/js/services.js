@@ -47,13 +47,27 @@ angular.module('starter.services', [])
       return null;
     }
   };
-}).service('jcRace',function(){
+}).service('jcRace',function($http){
       var race={
         "current":[{"matchId":1001,"homeTeam":"小牛","guestTeam":"热火","many":888,"homeScore":45,"guestScore":78,"time":"第1节 3:45","isattiton":true},{"matchId":1002,"homeTeam":"湖人","guestTeam":"火箭","many":1888,"homeScore":45,"guestScore":78,"time":"第2节 5:46","isattiton":true}],
         "over":[{"matchId":1001,"homeTeam":"小牛","guestTeam":"热火","many":888,"homeScore":45,"guestScore":78,"time":"第1节 3:45","isattiton":false},{"matchId":1002,"homeTeam":"湖人","guestTeam":"火箭","many":1888,"homeScore":45,"guestScore":78,"time":"第2节 5:46","isattiton":false}],
         "attention":[{"matchId":1001,"homeTeam":"小牛","guestTeam":"热火","many":888,"homeScore":45,"guestScore":78,"time":"第1节 3:45","isattiton":true}]
       }
+    var url = 'http://h5.daily.2caipiao.com/jc/jcListData.do?agentId=1&vt=5&';
+    var detail_url = 'http://h5.daily.2caipiao.com/jc/raceDetailData.do?agentId=1&vt=5&raceId=';
     return {
-      all:race
+      current:function(){
+        return $http.get(url+'status=1');
+      },
+      over:function(){
+       //return $http.get(url+'status=2');
+        return $http.get('http://www.local.com/netCode/test.do');
+      },
+      attention:function(){
+        return $http.get(url+'status=2');
+      },
+      detail:function(matchId){
+        return $http.get(detail_url+matchId);
+      }
     };
   });

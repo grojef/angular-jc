@@ -1,0 +1,84 @@
+<style>
+  #js_scroll {
+    position: absolute;
+    z-index: 1;
+    top: 13.1rem;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
+	<div class="tch_lay">
+		<div class="tch_head bg_black">
+			<p class="tac fs36">我的竞猜</p>
+			<div class="icon_bg icon_back" ng-click="back();"></div>
+			<div class="icon_bg icon_toggle"></div>
+			<div class="icon_bg icon_filtrate"></div>
+		</div>
+		<div class="back_shadow" style="display:none;"></div>
+		<div class="toggle_box" style="display:none;">
+			<ul>
+				<li>竞彩足球</li>
+				<li>北京单场</li>
+				<li>胜负彩</li>
+				<li class="current">竞彩篮球</li>
+			</ul>
+		</div>
+		<div class="person_box bg_black">
+			<div class="preson_pic jiangpai_1st"></div>
+			<div class="person_con">
+				<div class="person_info"><span>U2B_深圳</span></div>
+				<div class="person_list">
+					<ul class="flex_equal">
+						<li>
+							<p>123456</p>
+							<p class="c666 fs20">猜豆</p>
+						</li>
+						<li>
+							<p>1000+</p>
+							<p class="c666 fs20">全球排名</p>
+						</li>
+						<li>
+							<p>0</p>
+							<p class="c666 fs20">已有奖品</p>
+						</li>
+						<li>
+							<p>0</p>
+							<p class="c666 fs20">可兑奖品</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="js_scroll">
+		<ul class="person_area">
+			<li class="person_1st">
+				<p class="green">我的猜豆</p>
+			</li>
+			<li class=" person_2st">
+				<a class="" href="javascript:;">竞猜记录</a>
+			</li>
+			<li class=" person_3st">
+				<p class="">分享有奖<span class="hot_icon"></span></p>
+			</li>
+			<li class=" person_4st">
+				<p class="">我的奖品</p>
+			</li>
+			<li class=" person_5st">
+				<p class="">兑换记录</p>
+			</li>
+			<li class=" person_6st">
+				<p class="">竞猜设置</p>
+			</li>
+			<li class=" person_7st">
+				<p class="">游戏规则</p>
+			</li>
+			<li class=" person_8st">
+				<p class="">信息反馈</p>
+			</li>
+		</ul>
+	</div>

@@ -1,0 +1,83 @@
+<style>
+  #js_scroll {
+    position: absolute;
+    z-index: 1;
+    top: 8rem;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
+	<div class="tch_lay">
+		<div class="tch_head bg_black">
+			<p class="tac fs36">竞猜记录</p>
+			<div class="icon_bg icon_back" ng-click="back();"></div>
+			<select class="sct_tch" name="" id="">
+				<option value="">近三月</option>
+				<option value="">近二月</option>
+			</select>
+		</div>
+		<div class="back_shadow" style="display:none;"></div>
+		<div class="toggle_box" style="display:none;">
+			<ul>
+				<li>竞彩足球</li>
+				<li>北京单场</li>
+				<li>胜负彩</li>
+				<li class="current">竞彩篮球</li>
+			</ul>
+		</div>
+		<div class="guess_tabs_hd">
+			<ul class="flex_equal">
+				<li class="current">全部</li>
+				<li>待开奖</li>
+				<li>正确</li>
+				<li>不正确</li>
+			</ul>
+		</div>
+	</div>
+	<div id="js_scroll">
+		<div class="accordion_box">
+			<dl class="accordion_item">
+				<dt class="accordion_hd"><span class="correct">正确</span></dt>
+				<dd class="accordion_bd">
+					<ul class="accordion_list">
+						<li><span class="c999">竞猜时间：</span>2014/11/10 13:41</li>
+						<li><span class="c999">题      目：</span>湖人vs火箭的让分胜负？</li>
+						<li><span class="c999">赛      果：</span>99:123</li>
+						<li><span class="c999">我的答案：</span>火箭-9.5 赔率：1.85</li>
+						<li><span class="c999">我的竞猜：</span>1000</li>
+						<li><span class="c999">获胜猜豆：</span>1850</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="accordion_item">
+				<dt class="accordion_hd"><span class="error">不正确</span></dt>
+				<dd class="accordion_bd">
+					<ul class="accordion_list">
+						<li><span class="c999">竞猜时间：</span>2014/11/10 13:41</li>
+						<li><span class="c999">题      目：</span>湖人vs火箭的让分胜负？</li>
+						<li><span class="c999">赛      果：</span>99:123</li>
+						<li><span class="c999">我的答案：</span>火箭-9.5 赔率：1.85</li>
+						<li><span class="c999">我的竞猜：</span>1000</li>
+						<li><span class="c999">获胜猜豆：</span>1850</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="accordion_item">
+				<dt class="accordion_hd"><span class="wait">待开奖</span></dt>
+				<dd class="accordion_bd">
+					<ul class="accordion_list">
+						<li><span class="c999">竞猜时间：</span>2014/11/10 13:41</li>
+						<li><span class="c999">题      目：</span>湖人vs火箭的让分胜负？</li>
+						<li><span class="c999">赛      果：</span>99:123</li>
+						<li><span class="c999">我的答案：</span>火箭-9.5 赔率：1.85</li>
+						<li><span class="c999">我的竞猜：</span>1000</li>
+						<li><span class="c999">获胜猜豆：</span>1850</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</div>
